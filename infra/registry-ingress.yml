@@ -4,6 +4,8 @@ kind: Ingress
 metadata:
   name: docker-registry-ingress
   namespace: container-registry
+  annotations:
+    nginx.ingress.kubernetes.io/proxy-body-size: "0"
 spec:
   ingressClassName: nginx
   rules:
